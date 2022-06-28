@@ -18,6 +18,11 @@ public class varietyExample {
         System.out.println(pow2);
         List<String> doubled = ints.stream().map(i -> i + "_" + i).collect(Collectors.toList());
         System.out.println(doubled);
+        System.out.println("Mapping with Complex function");
+        List<Integer> pows = pow2.stream().map(d-> {
+            String str= Double.toString(d);
+            return str.length();
+        }).collect(Collectors.toList());
 
     }
 }
